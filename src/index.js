@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
-
+import VideoList from './components/video_list';
+import VideoDetail from './components/video_detail';
 const API_KEY = 'AIzaSyCGrkK_tTmkgvXwKS_ET3AS9i25YhhMvss';
 
-// Create a new component. This Component should produce
-// some html
-const App = () => {
-  return (
-    <div>
-      <SearchBar />
-    </div>
-  );
-}
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-// Take this component's generated HTML and put it
-// on the page (in the DOM)
+    this.state = {
+      videos: [],
+      selectedVideo: null
+    };
+
+    YTSearch({key: API_KEY, term: 'coding'}, (videos) => {
+      this.setState({ videos });
+      // equals to: this.setState({ videos: videos});
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <SearchBar />
+        <VideoDetail video={this.state.selectedVideo}/>
+        <VideoList videos={this.state.videos} />
+      </div>
+    );
+  }
+}
 
 ReactDOM.render(<App />, document.querySelector('.container'));
