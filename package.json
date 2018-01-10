@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Simple Youtube Application made with Redux with React and Babel support",
   "main": "index.js",
+  "engines": {
+    "node": "^8.9.3",
+    "npm": "^5.5.1"
+  },
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
