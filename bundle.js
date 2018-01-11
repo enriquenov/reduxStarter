@@ -140,7 +140,7 @@
 	          'React Youtube API Search ',
 	          _react2.default.createElement('img', { className: 'ytb-logo', src: 'img/youtube.png', alt: 'youtube' })
 	        ),
-	        _react2.default.createElement(_search_bar2.default, { placeholder: 'Search for any youtube video...', onSearchTermChange: videoSearch }),
+	        _react2.default.createElement(_search_bar2.default, { onSearchTermChange: videoSearch }),
 	        _react2.default.createElement(_video_detail2.default, { video: this.state.selectedVideo }),
 	        _react2.default.createElement(_video_list2.default, {
 	          onVideoSelect: function onVideoSelect(selectedVideo) {
@@ -33215,6 +33215,7 @@
 	        'div',
 	        { className: 'search-bar' },
 	        _react2.default.createElement('input', {
+	          placeholder: 'Search for any youtube video...',
 	          value: this.state.term,
 	          onChange: function onChange(event) {
 	            return _this2.onInputChange(event.target.value);
