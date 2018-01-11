@@ -3,6 +3,11 @@ h1.title {
   margin-top: 50px;
 }
 
+h1.title img.ytb-logo {
+  height: 60px;
+  width: auto;
+}
+
 .search-bar {
   margin: 30px auto 40px;
   text-align: center;

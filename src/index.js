@@ -33,8 +33,8 @@ class App extends Component {
 
     return (
       <div>
-        <h1 className="title">React The Best Youtube API App Ever!</h1>
-        <SearchBar onSearchTermChange={videoSearch} />
+        <h1 className="title">React Youtube API Search <img className="ytb-logo" src="img/youtube.png" alt="youtube" /></h1>
+        <SearchBar placeholder="Search for any youtube video..." onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo}/>
         <VideoList
           onVideoSelect = {selectedVideo => this.setState({selectedVideo}) }
