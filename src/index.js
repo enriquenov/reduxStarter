@@ -33,7 +33,7 @@ class App extends Component {
 
     return (
       <div>
-        <h1 className="title">React Youtube API Searcher</h1>
+        <h1 className="title">React The Best Youtube API App Ever!</h1>
         <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo}/>
         <VideoList
